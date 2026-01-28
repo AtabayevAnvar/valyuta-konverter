@@ -343,18 +343,25 @@ body::before {
 }
 
 .input-wrapper select optgroup {
-    background: #1a1a2e;
-    color: #a0aec0;
+    background: #0a0a0a;
+    color: #D4AF37;
     font-weight: 700;
     font-size: 0.85rem;
     padding: 8px 0;
 }
 
 .input-wrapper select option {
-    background: #1a1a2e;
+    background: #141414;
     color: white;
     padding: 10px;
     font-weight: 400;
+}
+
+.input-wrapper select option:hover,
+.input-wrapper select option:focus,
+.input-wrapper select option:checked {
+    background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%);
+    color: #0a0a0a;
 }
 
 /* Swap Button */
