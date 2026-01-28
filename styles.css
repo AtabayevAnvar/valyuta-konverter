@@ -44,13 +44,32 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a0a0a 0%, #141414 50%, #0a0a0a 100%);
+    background:
+        radial-gradient(ellipse at top right, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom left, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #0a0a0a 0%, #0f0f0f 25%, #0a0a0a 50%, #0f0f0f 75%, #0a0a0a 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        linear-gradient(45deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+        linear-gradient(-45deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Background Animation */
@@ -172,8 +191,8 @@ body {
     background: var(--primary-gradient);
     border-radius: 50%;
     margin-bottom: 16px;
-    color: white;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    color: #0a0a0a;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -181,11 +200,11 @@ body {
 
     0%,
     100% {
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
     }
 
     50% {
-        box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6);
+        box-shadow: 0 10px 40px rgba(212, 175, 55, 0.6);
     }
 }
 
@@ -347,18 +366,16 @@ body {
     background: var(--primary-gradient);
     border: none;
     border-radius: 12px;
-    /* Square with rounded corners */
-    color: white;
+    color: #0a0a0a;
     cursor: pointer;
     margin: 8px 0 16px auto;
-    /* Right alignment: top 8px, right 0, bottom 16px, left auto */
     transition: var(--transition);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
 }
 
 .swap-btn:hover {
     transform: scale(1.1) rotate(180deg);
-    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
 }
 
 .swap-btn:active {
