@@ -255,9 +255,9 @@ body::before {
 }
 
 .input-wrapper:focus-within {
-    border-color: var(--accent-color);
-    background: var(--input-focus);
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+    border-color: rgba(212, 175, 55, 0.5);
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
 }
 
 .input-wrapper input {
