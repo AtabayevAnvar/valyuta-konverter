@@ -1,0 +1,11 @@
+# Pullarim - Valyuta Konverter
+# https://pullarim.uz
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pullarim.uz/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
