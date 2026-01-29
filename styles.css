@@ -276,9 +276,9 @@ body::before {
 .clear-input-btn {
     position: absolute;
     right: 8px;
-    top: 24px;
+    top: 32px;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
+    background: #2f2f2f;
     border: none;
     border-radius: 50%;
     color: var(--text-secondary);
