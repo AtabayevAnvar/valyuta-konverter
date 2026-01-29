@@ -393,7 +393,7 @@ body::before {
 }
 
 .swap-btn-wrapper:hover::before {
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
 }
 
 .swap-btn {
@@ -411,11 +411,26 @@ body::before {
 }
 
 .swap-btn:hover {
-    transform: scale(1.1) rotate(180deg);
+    transform: none;
 }
 
 .swap-btn:active {
-    transform: scale(0.95) rotate(180deg);
+    transform: scale(0.95);
+}
+
+/* Desktop only - hover animation */
+@media (hover: hover) and (pointer: fine) {
+    .swap-btn-wrapper:hover::before {
+        box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+    }
+
+    .swap-btn:hover {
+        transform: scale(1.1) rotate(180deg);
+    }
+
+    .swap-btn:active {
+        transform: scale(0.95) rotate(180deg);
+    }
 }
 
 /* Exchange Rate Info */
